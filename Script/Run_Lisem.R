@@ -12,8 +12,9 @@ server<- function(input,output)
 {
   observeEvent(input$run,
                {
-                 system('cmd.exe', input = '/Lisem5/Lisem.exe')
+                 system('cmd.exe', input = '/Lisem5/Lisem.exe -b –no –r 20150920gps.run –c [No Erosion simulation=0]')
                })
 }
 
 shinyApp(ui,server)
+
