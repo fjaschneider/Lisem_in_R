@@ -4,23 +4,13 @@
 
 library(shiny)
 
-ui <- fluidPage(
-  actionButton('run','Run executable!')
-)
+ui <- fluidPage(actionButton('run','Run executable!'))
 
-server<- function(input,output)
-{
-  observeEvent(input$run,
-               {
-                 system('cmd.exe', input = 'lisem -b -no -r D:/Modeling/Lisem/Geo_processing/20151224/20151224gps.run')
-               })
-}
-
-shinyApp(ui,server)
-
-server <- function(input,output) {
-  observeEvent(input$run, 
-               {system('cmd.exe', input = 'lisem.exe -b -r D:/Modeling/Lisem/Geo_processing/20151224/20151224gps.run')}
-  )
+server<- function(input,output){
+  observeEvent(input$run, {
+    system('cmd.exe', input = 'lisem -b -no -r D:/Modeling/Lisem/Geo_processing/20151224/20151224gps.run')
+  })
   }
+
 shinyApp(ui,server)
+
