@@ -4,7 +4,7 @@
 
 library(shiny)
 
-ui <- fluidPage(actionButton('run','Run executable!'))
+ui <- fluidPage(actionButton('run_raster', 'PCRaster!'), actionButton('run','LISEM!'))
 
 server<- function(input,output){
   observeEvent(input$run, {
