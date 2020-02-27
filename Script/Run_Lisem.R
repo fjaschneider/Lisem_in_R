@@ -1,6 +1,6 @@
 ################# Runing Lisem in R #################
 
-# How can I call a program in R
+# How create a interface for call a program
 
 library(shiny)
 
